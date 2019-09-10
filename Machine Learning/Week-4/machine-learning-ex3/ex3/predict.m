@@ -24,14 +24,14 @@ p = zeros(size(X, 1), 1);
 % Add ones to the X data matrix
 X = [ones(m, 1) X];
 
-z1 = X*Theta1';
-a2 = 1./(1+exp(-z1));
+z2 = X*Theta1';
+a2 = 1./(1+exp(-z2));
 
 % Add ones to the a2 data matrix
 a2 = [ones(m, 1) a2];
 
-z2 = a2*Theta2';
-h = 1./(1+exp(-z2));
+z3 = a2*Theta2';
+h = 1./(1+exp(-z3));
 
 [M p] = max(h, [], 2);
 
